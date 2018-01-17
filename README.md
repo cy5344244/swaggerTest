@@ -1,2 +1,5 @@
-# swaggerTest
-Swagger 是一个规范和完整的框架，用于生成、描述、调用和可视化 RESTful 风格的 Web 服务。代码我是我写的一个测试demo。
+# Jdruid
+
+[![Build Status](https://api.travis-ci.org/ethendev/jdruid.svg?branch=master)](https://travis-ci.org/ethendev/jdruid)
+[![Latest release](https://img.shields.io/github/release/ethendev/jdruid.svg)](https://github.com/ethendev/jdruid/releases/latest)
+[![GitHub license](https://img.shields.io/badge/license-apache%202.0-blue.svg)](http://www.apache.org/licenses/LICENSE-2.0)
