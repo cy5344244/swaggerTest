@@ -4,7 +4,7 @@ import lombok.Getter;
 
 /**
  * logical expression filter type
- * @author: chy
+ * @author: Ethan
  * @Date: 2018/9/15
  */
 @Getter

@@ -4,7 +4,7 @@ import org.junit.Assert;
 import org.junit.Test;
 
 /**
- * @author: chy
+ * @author: Ethan
  * @Date: 2018/9/15
  */
 public class LogicalTypeTest {
