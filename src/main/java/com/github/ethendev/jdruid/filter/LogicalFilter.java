@@ -13,16 +13,16 @@ import java.util.List;
  */
 @Getter
 @EqualsAndHashCode(callSuper = true)
-public class LogicalFilter extends DruidFilter {
+public class LogicalFilter extends BaseFilter {
 
-    private List<DruidFilter> fileds;
+    private List<BaseFilter> fileds;
 
-    public LogicalFilter(@NonNull String type, @NonNull List<DruidFilter> fileds) {
+    public LogicalFilter(@NonNull String type, @NonNull List<BaseFilter> fileds) {
         super(type);
         this.fileds = fileds;
     }
 
-    public LogicalFilter(@NonNull LogicalType type, @NonNull List<DruidFilter> fileds) {
+    public LogicalFilter(@NonNull LogicalType type, @NonNull List<BaseFilter> fileds) {
         super(type.getValue());
         this.fileds = fileds;
     }

@@ -11,7 +11,7 @@ import java.util.List;
  * @Date: 2018/9/15
  */
 @Getter
-public class JavaScriptAggregator extends DruidAggregator {
+public class JavaScriptAggregator extends BaseAggregator {
     private static String AGGREGATOR_TYPE = "javascript";
 
     private List<String> fieldNames;

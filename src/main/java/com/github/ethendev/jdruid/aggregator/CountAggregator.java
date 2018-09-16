@@ -8,7 +8,7 @@ import lombok.NonNull;
  * @Date: 2018/9/15
  */
 @Getter
-public class CountAggregator extends DruidAggregator {
+public class CountAggregator extends BaseAggregator {
     private static String AGGREGATOR_TYPE = "count";
     private String fieldName;
 

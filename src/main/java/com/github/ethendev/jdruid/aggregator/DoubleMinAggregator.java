@@ -8,7 +8,7 @@ import lombok.NonNull;
  * @Date: 2018/9/15
  */
 @Getter
-public class DoubleMinAggregator extends DruidAggregator {
+public class DoubleMinAggregator extends BaseAggregator {
     private static String AGGREGATOR_TYPE = "doubleMin";
     private String fieldName;
 

@@ -11,7 +11,7 @@ import java.util.List;
  * @Date: 2018/9/15
  */
 @Getter
-public class CommonAggregator extends DruidAggregator {
+public class CommonAggregator extends BaseAggregator {
 
     private String fieldName;
     private List<String> fieldNames;

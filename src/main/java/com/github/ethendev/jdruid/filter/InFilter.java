@@ -12,7 +12,7 @@ import java.util.List;
  */
 @Getter
 @EqualsAndHashCode(callSuper = true)
-public class InFilter extends DruidFilter {
+public class InFilter extends BaseFilter {
     private static String FILTER_TYPE = "in";
 
     private String dimension;

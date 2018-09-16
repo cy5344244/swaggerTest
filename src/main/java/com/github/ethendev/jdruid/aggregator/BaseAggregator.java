@@ -11,7 +11,7 @@ import lombok.NoArgsConstructor;
 @Getter
 @NoArgsConstructor
 @AllArgsConstructor
-public abstract class DruidAggregator {
-    protected String type;
-    protected String name;
+public class BaseAggregator {
+    private String type;
+    private String name;
 }

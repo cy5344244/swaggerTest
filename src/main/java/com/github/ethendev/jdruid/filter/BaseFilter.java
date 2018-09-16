@@ -9,6 +9,6 @@ import lombok.Getter;
  */
 @Getter
 @AllArgsConstructor
-public abstract class DruidFilter {
-    protected String type;
+public class BaseFilter {
+    private String type;
 }

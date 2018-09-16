@@ -8,7 +8,7 @@ import lombok.NonNull;
  * @Date: 2018/9/15
  */
 @Getter
-public class LongMaxAggregator extends DruidAggregator {
+public class LongMaxAggregator extends BaseAggregator {
     private static String AGGREGATOR_TYPE = "longMax";
     private String fieldName;
 

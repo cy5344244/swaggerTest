@@ -1,5 +1,6 @@
 package com.github.ethendev.jdruid.filter;
 
+import com.fasterxml.jackson.annotation.JsonInclude;
 import lombok.Builder;
 import lombok.EqualsAndHashCode;
 import lombok.Getter;
@@ -11,7 +12,8 @@ import lombok.NonNull;
  */
 @Getter
 @EqualsAndHashCode(callSuper = true)
-public class BoundFilter extends DruidFilter {
+@JsonInclude(JsonInclude.Include.NON_NULL)
+public class BoundFilter extends BaseFilter {
     private static String FILTER_TYPE = "bound";
 
     private String dimension;

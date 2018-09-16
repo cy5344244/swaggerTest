@@ -10,7 +10,7 @@ import lombok.NonNull;
  */
 @Getter
 @EqualsAndHashCode(callSuper = true)
-public class RegexFilter extends DruidFilter {
+public class RegexFilter extends BaseFilter {
     private static String FILTER_TYPE = "regex";
 
     private String dimension;

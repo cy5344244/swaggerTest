@@ -8,7 +8,7 @@ import lombok.NonNull;
  * @Date: 2018/9/15
  */
 @Getter
-public class HyperUniqueAggregator extends DruidAggregator {
+public class HyperUniqueAggregator extends BaseAggregator {
     private static String AGGREGATOR_TYPE = "hyperUnique";
     private String fieldName;
 

@@ -10,7 +10,7 @@ import java.util.List;
  * @Date: 2018/9/15
  */
 @Getter
-public class CardinalityAggregator extends DruidAggregator {
+public class CardinalityAggregator extends BaseAggregator {
     private static String AGGREGATOR_TYPE = "cardinality";
     private List<String> fieldNames;
     private Boolean byRow;
