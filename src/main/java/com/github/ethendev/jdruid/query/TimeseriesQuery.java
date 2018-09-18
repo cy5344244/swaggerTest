@@ -16,6 +16,7 @@ import java.util.List;
 @Getter
 @JsonInclude(JsonInclude.Include.NON_NULL)
 public class TimeseriesQuery extends BaseQuery {
+    private static final String QUERY_TYPE = "timeseries";
     private BaseFilter filter;
     private List<BaseAggregator> aggregators;
     private List<BasePostAggregator> postAggregations;
@@ -23,9 +24,9 @@ public class TimeseriesQuery extends BaseQuery {
     private Context context;
 
     @Builder
-    private TimeseriesQuery(String queryType, String dataSource, List<String> intervals, GranularityType granularity,
+    private TimeseriesQuery(String dataSource, List<String> intervals, GranularityType granularity,
                            BaseFilter filter, List<BaseAggregator> aggregators, List<BasePostAggregator> postAggregations, Boolean descending, Context context) {
-        super(queryType, dataSource, intervals, granularity);
+        super(QUERY_TYPE, dataSource, intervals, granularity);
         this.filter = filter;
         this.aggregators = aggregators;
         this.postAggregations = postAggregations;

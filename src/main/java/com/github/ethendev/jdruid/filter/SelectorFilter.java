@@ -11,7 +11,7 @@ import lombok.NonNull;
 @Getter
 @EqualsAndHashCode(callSuper = true)
 public class SelectorFilter extends BaseFilter {
-    private static String FILTER_TYPE = "regex";
+    private static String FILTER_TYPE = "selector";
 
     private String dimension;
     private String value;

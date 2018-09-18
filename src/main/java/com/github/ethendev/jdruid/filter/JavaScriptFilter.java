@@ -11,7 +11,7 @@ import lombok.NonNull;
 @Getter
 @EqualsAndHashCode(callSuper = true)
 public class JavaScriptFilter extends BaseFilter {
-    private static String FILTER_TYPE = "javascript";
+    private static final String FILTER_TYPE = "javascript";
 
     private String dimension;
     private String function;

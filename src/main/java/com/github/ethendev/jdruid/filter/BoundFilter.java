@@ -14,7 +14,7 @@ import lombok.NonNull;
 @EqualsAndHashCode(callSuper = true)
 @JsonInclude(JsonInclude.Include.NON_NULL)
 public class BoundFilter extends BaseFilter {
-    private static String FILTER_TYPE = "bound";
+    private static final String FILTER_TYPE = "bound";
 
     private String dimension;
     private String lower;

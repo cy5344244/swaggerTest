@@ -11,7 +11,7 @@ import lombok.NonNull;
 @Getter
 @EqualsAndHashCode(callSuper = true)
 public class RegexFilter extends BaseFilter {
-    private static String FILTER_TYPE = "regex";
+    private static final String FILTER_TYPE = "regex";
 
     private String dimension;
     private String pattern;

@@ -18,6 +18,7 @@ import java.util.List;
 @Getter
 @JsonInclude(JsonInclude.Include.NON_NULL)
 public class GroupByQuery extends BaseQuery {
+    private static final String QUERY_TYPE = "groupBy";
     private List<String> dimensions;
     private LimitSpec limitSpec;
     // TODO change type
@@ -28,10 +29,10 @@ public class GroupByQuery extends BaseQuery {
     private Context context;
 
     @Builder
-    public GroupByQuery(String queryType, String dataSource, List<String> intervals, GranularityType granularity,
+    public GroupByQuery(String dataSource, List<String> intervals, GranularityType granularity,
                         @NonNull List<String> dimensions, LimitSpec limitSpec, Object having, BaseFilter filter,
                         List<BaseAggregator> aggregators, List<BasePostAggregator> postAggregations, Context context) {
-        super(queryType, dataSource, intervals, granularity);
+        super(QUERY_TYPE, dataSource, intervals, granularity);
         this.dimensions = dimensions;
         this.limitSpec = limitSpec;
         this.having = having;

@@ -11,7 +11,7 @@ import lombok.NonNull;
 @Getter
 @EqualsAndHashCode(callSuper = true)
 public class SearchFilter extends BaseFilter {
-    private static String FILTER_TYPE = "search";
+    private static final String FILTER_TYPE = "search";
 
     private String dimension;
 

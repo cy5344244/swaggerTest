@@ -1,6 +1,6 @@
 package com.github.ethendev.jdruid.query;
 
-import com.fasterxml.jackson.annotation.JsonGetter;
+import com.fasterxml.jackson.annotation.JsonValue;
 
 /**
  * @author: Ethan
@@ -26,7 +26,7 @@ public enum GranularityType {
         this.value = value;
     }
 
-    @JsonGetter
+    @JsonValue
     public String getValue() {
         return value;
     }
