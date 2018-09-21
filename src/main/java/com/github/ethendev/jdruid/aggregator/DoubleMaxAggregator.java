@@ -1,19 +1,16 @@
 package com.github.ethendev.jdruid.aggregator;
 
 import lombok.Getter;
-import lombok.NonNull;
 
 /**
  * @author: Ethan
  * @Date: 2018/9/15
  */
 @Getter
-public class DoubleMaxAggregator extends BaseAggregator {
+public class DoubleMaxAggregator extends CommonAggregator {
     private static String AGGREGATOR_TYPE = "doubleMax";
-    private String fieldName;
 
-    public DoubleMaxAggregator(@NonNull String name, @NonNull String fieldName) {
-        super(AGGREGATOR_TYPE, name);
-        this.fieldName = fieldName;
+    public DoubleMaxAggregator(String name, String fieldName) {
+        super(AGGREGATOR_TYPE, name, fieldName);
     }
 }

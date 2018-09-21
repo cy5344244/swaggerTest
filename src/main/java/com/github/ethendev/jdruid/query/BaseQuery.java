@@ -12,7 +12,7 @@ import java.util.List;
  */
 @Getter
 @NoArgsConstructor
-public class BaseQuery {
+public abstract class BaseQuery {
     private String queryType;
     private String dataSource;
     /**

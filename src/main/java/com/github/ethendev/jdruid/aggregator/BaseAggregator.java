@@ -11,7 +11,7 @@ import lombok.NoArgsConstructor;
 @Getter
 @NoArgsConstructor
 @AllArgsConstructor
-public class BaseAggregator {
+public abstract class BaseAggregator {
     private String type;
     private String name;
 }

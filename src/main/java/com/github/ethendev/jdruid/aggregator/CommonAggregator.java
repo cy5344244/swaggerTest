@@ -16,17 +16,9 @@ public class CommonAggregator extends BaseAggregator {
     private String fieldName;
     private List<String> fieldNames;
 
-    public CommonAggregator(@NonNull AggregatorType type, @NonNull String name, @NonNull String fieldName) {
-        super(type.getValue(), name);
+    public CommonAggregator(@NonNull String aggregatorType, @NonNull String name, @NonNull String fieldName) {
+        super(aggregatorType, name);
         this.fieldName = fieldName;
-    }
-
-    public CommonAggregator(@NonNull AggregatorType type, @NonNull String name, @NonNull List<String> fieldNames) {
-        super(type.getValue(), name);
-        if (!AggregatorType.CARDINALITY.equals(type)) {
-            throw new IllegalArgumentException("illegal argument aggregator type: " + type.getValue());
-        }
-        this.fieldNames = fieldNames;
     }
 
 }

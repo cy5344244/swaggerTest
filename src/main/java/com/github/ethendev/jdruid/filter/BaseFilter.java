@@ -9,6 +9,6 @@ import lombok.Getter;
  */
 @Getter
 @AllArgsConstructor
-public class BaseFilter {
+public abstract class BaseFilter {
     private String type;
 }
