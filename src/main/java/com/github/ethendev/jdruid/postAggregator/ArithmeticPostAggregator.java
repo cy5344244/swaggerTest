@@ -1,6 +1,8 @@
 package com.github.ethendev.jdruid.postAggregator;
 
+import com.fasterxml.jackson.annotation.JsonInclude;
 import lombok.Builder;
+import lombok.Getter;
 import lombok.NonNull;
 
 import java.util.List;
@@ -9,6 +11,8 @@ import java.util.List;
  * @author: Ethan
  * @Date: 2018/9/21
  */
+@Getter
+@JsonInclude(JsonInclude.Include.NON_NULL)
 public class ArithmeticPostAggregator extends BasePostAggregator {
     private static String AGGREGATOR_TYPE = "arithmetic";
 
