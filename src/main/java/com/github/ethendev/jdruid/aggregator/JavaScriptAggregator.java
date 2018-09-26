@@ -12,8 +12,6 @@ import java.util.List;
  */
 @Getter
 public class JavaScriptAggregator extends BaseAggregator {
-    private static String AGGREGATOR_TYPE = "javascript";
-
     private List<String> fieldNames;
     private String fnAggregate;
     private String fnCombine;
@@ -22,7 +20,7 @@ public class JavaScriptAggregator extends BaseAggregator {
     @Builder
     public JavaScriptAggregator(@NonNull String name, @NonNull List<String> fieldNames,
                                 String fnAggregate, String fnCombine, String fnReset) {
-        super(AGGREGATOR_TYPE, name);
+        super(AggregatorType.JAVASCRIPT.getValue(), name);
         this.fieldNames = fieldNames;
         this.fnAggregate = fnAggregate;
         this.fnCombine = fnCombine;

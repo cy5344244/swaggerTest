@@ -1,20 +1,18 @@
-package com.github.ethendev.jdruid.filter;
+package com.github.ethendev.jdruid.query.metadata;
 
 import com.fasterxml.jackson.annotation.JsonValue;
 
 /**
- * logical expression filter type
  * @author: Ethan
- * @Date: 2018/9/15
+ * @Date: 2018/9/26
  */
-public enum LogicalType {
-    AND("and"),
-    NOT("not"),
-    OR("or");
+public enum BoundType {
+    MAX_TIME("maxTime"),
+    MIN_TIME("minTime");
 
     private String value;
 
-    LogicalType(String value) {
+    BoundType(String value) {
         this.value = value;
     }
 

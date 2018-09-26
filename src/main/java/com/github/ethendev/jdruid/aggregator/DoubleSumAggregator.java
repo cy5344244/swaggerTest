@@ -8,9 +8,8 @@ import lombok.Getter;
  */
 @Getter
 public class DoubleSumAggregator extends CommonAggregator {
-    private static String AGGREGATOR_TYPE = "doubleSum";
 
     public DoubleSumAggregator(String name, String fieldName) {
-        super(AGGREGATOR_TYPE, name, fieldName);
+        super(AggregatorType.DOUBLE_SUM, name, fieldName);
     }
 }

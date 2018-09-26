@@ -15,15 +15,15 @@ import java.util.List;
 @EqualsAndHashCode(callSuper = true)
 public class LogicalFilter extends BaseFilter {
 
-    private List<BaseFilter> fileds;
+    private List<BaseFilter> fields;
 
-    public LogicalFilter(@NonNull String type, @NonNull List<BaseFilter> fileds) {
+    public LogicalFilter(@NonNull String type, @NonNull List<BaseFilter> fields) {
         super(type);
-        this.fileds = fileds;
+        this.fields = fields;
     }
 
-    public LogicalFilter(@NonNull LogicalType type, @NonNull List<BaseFilter> fileds) {
+    public LogicalFilter(@NonNull LogicalType type, @NonNull List<BaseFilter> fields) {
         super(type.getValue());
-        this.fileds = fileds;
+        this.fields = fields;
     }
 }

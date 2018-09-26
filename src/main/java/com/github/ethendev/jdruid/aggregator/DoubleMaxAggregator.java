@@ -8,9 +8,8 @@ import lombok.Getter;
  */
 @Getter
 public class DoubleMaxAggregator extends CommonAggregator {
-    private static String AGGREGATOR_TYPE = "doubleMax";
 
     public DoubleMaxAggregator(String name, String fieldName) {
-        super(AGGREGATOR_TYPE, name, fieldName);
+        super(AggregatorType.DOUBLE_MAX, name, fieldName);
     }
 }

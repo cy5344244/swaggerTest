@@ -11,17 +11,16 @@ import java.util.List;
  */
 @Getter
 public class CardinalityAggregator extends BaseAggregator {
-    private static String AGGREGATOR_TYPE = "cardinality";
     private List<String> fieldNames;
     private Boolean byRow;
 
     public CardinalityAggregator(@NonNull String name, @NonNull List<String> fieldNames) {
-        super(AGGREGATOR_TYPE, name);
+        super(AggregatorType.CARDINALITY.getValue(), name);
         this.fieldNames = fieldNames;
     }
 
     public CardinalityAggregator(@NonNull String name, @NonNull List<String> fieldNames, Boolean byRow) {
-        super(AGGREGATOR_TYPE, name);
+        super(AggregatorType.CARDINALITY.getValue(), name);
         this.fieldNames = fieldNames;
         this.byRow = byRow;
     }

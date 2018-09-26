@@ -3,7 +3,6 @@ package com.github.ethendev.jdruid;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.github.ethendev.jdruid.query.BaseQuery;
 import com.squareup.okhttp.*;
-import lombok.extern.slf4j.Slf4j;
 
 import java.io.IOException;
 
@@ -11,7 +10,6 @@ import java.io.IOException;
  * @author: Ethan
  * @Date: 2018/9/18
  */
-@Slf4j
 public class DruidClient {
 
     private static final MediaType JSON = MediaType.parse("application/json; charset=utf-8");

@@ -8,9 +8,8 @@ import lombok.Getter;
  */
 @Getter
 public class LongSumAggregator extends CommonAggregator {
-    private static String AGGREGATOR_TYPE = "longSum";
 
     public LongSumAggregator(String name, String fieldName) {
-        super(AGGREGATOR_TYPE, name, fieldName);
+        super(AggregatorType.LONG_SUM, name, fieldName);
     }
 }

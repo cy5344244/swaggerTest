@@ -1,4 +1,4 @@
-package com.github.ethendev.jdruid;
+package com.github.ethendev.jdruid.query;
 
 import lombok.NonNull;
 

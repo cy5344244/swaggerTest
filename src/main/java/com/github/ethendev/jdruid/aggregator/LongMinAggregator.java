@@ -8,9 +8,8 @@ import lombok.Getter;
  */
 @Getter
 public class LongMinAggregator extends CommonAggregator {
-    private static String AGGREGATOR_TYPE = "longMin";
 
     public LongMinAggregator(String name, String fieldName) {
-        super(AGGREGATOR_TYPE, name, fieldName);
+        super(AggregatorType.LONG_MIN, name, fieldName);
     }
 }

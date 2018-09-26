@@ -1,21 +1,20 @@
 package com.github.ethendev.jdruid.aggregator;
 
-import lombok.Getter;
+import com.fasterxml.jackson.annotation.JsonValue;
 
 /**
  * @author: Ethan
  * @Date: 2018/9/15
  */
-@Getter
 public enum AggregatorType {
     CARDINALITY("cardinality"),
     COUNT("count"),
     DOUBLE_MAX("doubleMax"),
     DOUBLE_MIN("doubleMin"),
     DOUBLE_SUM("doubleSum"),
-    //FILTERED("filtered"),
+    FILTERED("filtered"),
     HYPER_UNIQUE("hyperUnique"),
-    //JAVASCRIPT("javascript"),
+    JAVASCRIPT("javascript"),
     LONG_MAX("longMax"),
     LONG_MIN("longMin"),
     LONG_SUM("longSum");
@@ -24,5 +23,10 @@ public enum AggregatorType {
 
     AggregatorType(String value) {
         this.value = value;
+    }
+
+    @JsonValue
+    public String getValue() {
+        return value;
     }
 }

@@ -1,5 +1,6 @@
 package com.github.ethendev.jdruid;
 
+import com.github.ethendev.jdruid.query.Interval;
 import org.junit.Test;
 
 import java.time.ZonedDateTime;

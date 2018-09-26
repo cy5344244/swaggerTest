@@ -8,9 +8,8 @@ import lombok.Getter;
  */
 @Getter
 public class CountAggregator extends CommonAggregator {
-    private static String AGGREGATOR_TYPE = "count";
 
     public CountAggregator(String name, String fieldName) {
-        super(AGGREGATOR_TYPE, name, fieldName);
+        super(AggregatorType.COUNT, name, fieldName);
     }
 }
