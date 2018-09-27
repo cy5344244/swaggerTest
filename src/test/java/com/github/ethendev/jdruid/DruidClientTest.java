@@ -43,7 +43,7 @@ public class DruidClientTest {
                 .granularity(GranularityType.ALL)
                 .intervals(Arrays.asList("2018-01-15T16:00:00Z/2018-01-15T16:05:00Z"))
                 .filter(new LogicalFilter(LogicalType.AND, Arrays.asList(sf1, sf2)))
-                .aggregators(Arrays.asList(longSum, hyperUnique))
+                .aggregations(Arrays.asList(longSum, hyperUnique))
                 .postAggregations(Arrays.asList(post))
                 .build();
 
@@ -76,7 +76,7 @@ public class DruidClientTest {
                 .metric(new NumericMetric("pv"))
                 .intervals(Arrays.asList("2016-08-30T00:00:00Z/2016-09-05T23:59:59Z"))
                 .filter(new LogicalFilter(LogicalType.AND, Arrays.asList(sf1, sf2)))
-                .aggregators(Arrays.asList(longSum, hyperUnique))
+                .aggregations(Arrays.asList(longSum, hyperUnique))
                 .postAggregations(Arrays.asList(post))
                 .build();
 

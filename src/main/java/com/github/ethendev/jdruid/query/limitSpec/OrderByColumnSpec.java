@@ -1,8 +1,7 @@
 package com.github.ethendev.jdruid.query.limitSpec;
 
-import lombok.AllArgsConstructor;
+import com.fasterxml.jackson.annotation.JsonValue;
 import lombok.Data;
-import lombok.NoArgsConstructor;
 import lombok.NonNull;
 
 /**
@@ -10,16 +9,22 @@ import lombok.NonNull;
  * @Date: 2018/9/16
  */
 @Data
-@AllArgsConstructor
-@NoArgsConstructor
 public class OrderByColumnSpec extends LimitSpec {
     private String dimension;
-    /**
-     * "ascending"|"descending"
-     */
-    private String direction;
-    /**
-     * "lexicographic"(default)|"alphanumeric"|"strlen"|"numeric"
-     */
-    private String dimensionOrder;
+    private DirectionType direction;
+    private DimensionOrderType dimensionOrder;
+
+    public OrderByColumnSpec(@NonNull String dimension, @NonNull DirectionType direction) {
+        this.dimension = dimension;
+        this.direction = direction;
+        this.dimensionOrder = DimensionOrderType.LEXICOGRAPHIC;
+    }
+
+    public OrderByColumnSpec(@NonNull String dimension, @NonNull DirectionType direction,
+                             @NonNull DimensionOrderType dimensionOrder) {
+        this.dimension = dimension;
+        this.direction = direction;
+        this.dimensionOrder = dimensionOrder;
+    }
+
 }

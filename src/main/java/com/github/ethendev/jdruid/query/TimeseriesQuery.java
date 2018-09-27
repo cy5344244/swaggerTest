@@ -18,17 +18,17 @@ import java.util.List;
 public class TimeseriesQuery extends BaseQuery {
     private static final String QUERY_TYPE = "timeseries";
     private BaseFilter filter;
-    private List<BaseAggregator> aggregators;
+    private List<BaseAggregator> aggregations;
     private List<BasePostAggregator> postAggregations;
     private Boolean descending;
     private Context context;
 
     @Builder
     private TimeseriesQuery(String dataSource, List<String> intervals, GranularityType granularity,
-                           BaseFilter filter, List<BaseAggregator> aggregators, List<BasePostAggregator> postAggregations, Boolean descending, Context context) {
+                           BaseFilter filter, List<BaseAggregator> aggregations, List<BasePostAggregator> postAggregations, Boolean descending, Context context) {
         super(QUERY_TYPE, dataSource, intervals, granularity);
         this.filter = filter;
-        this.aggregators = aggregators;
+        this.aggregations = aggregations;
         this.postAggregations = postAggregations;
         this.descending = descending;
         this.context = context;

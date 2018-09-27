@@ -18,7 +18,7 @@ public class JavaScriptAggregator extends BaseAggregator {
     private String fnReset;
 
     @Builder
-    public JavaScriptAggregator(@NonNull String name, @NonNull List<String> fieldNames,
+    private JavaScriptAggregator(@NonNull String name, @NonNull List<String> fieldNames,
                                 String fnAggregate, String fnCombine, String fnReset) {
         super(AggregatorType.JAVASCRIPT.getValue(), name);
         this.fieldNames = fieldNames;

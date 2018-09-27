@@ -30,7 +30,7 @@ public class DruidClient {
         if (!response.isSuccessful()) {
             throw new IOException("query error: " + response);
         }
-        return response.body().toString();
+        return response.body().string();
     }
 
     public String query(String url, BaseQuery param) throws IOException {

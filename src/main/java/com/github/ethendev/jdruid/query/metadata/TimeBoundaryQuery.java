@@ -2,6 +2,7 @@ package com.github.ethendev.jdruid.query.metadata;
 
 import com.github.ethendev.jdruid.filter.BaseFilter;
 import com.github.ethendev.jdruid.query.Context;
+import lombok.Builder;
 import lombok.Getter;
 import lombok.NonNull;
 
@@ -24,7 +25,8 @@ public class TimeBoundaryQuery {
     private BaseFilter filter;
     private Context context;
 
-    public TimeBoundaryQuery(@NonNull String dataSource, BoundType bound, BaseFilter filter, Context context) {
+    @Builder
+    private TimeBoundaryQuery(@NonNull String dataSource, BoundType bound, BaseFilter filter, Context context) {
         this.queryType = QUERY_TYPE;
         this.dataSource = dataSource;
         this.bound = bound;

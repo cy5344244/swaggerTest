@@ -20,7 +20,7 @@ import java.util.List;
 public class TopNQuery extends BaseQuery {
     private static final String QUERY_TYPE = "topN";
     private BaseFilter filter;
-    private List<BaseAggregator> aggregators;
+    private List<BaseAggregator> aggregations;
     private List<BasePostAggregator> postAggregations;
     private String dimension;
     private Integer threshold;
@@ -29,11 +29,11 @@ public class TopNQuery extends BaseQuery {
 
     @Builder
     public TopNQuery(String dataSource, List<String> intervals, GranularityType granularity,
-                     BaseFilter filter, List<BaseAggregator> aggregators, List<BasePostAggregator> postAggregations,
+                     BaseFilter filter, List<BaseAggregator> aggregations, List<BasePostAggregator> postAggregations,
                      @NonNull String dimension, @NonNull Integer threshold, @NonNull AbstractMetric metric, Context context) {
         super(QUERY_TYPE, dataSource, intervals, granularity);
         this.filter = filter;
-        this.aggregators = aggregators;
+        this.aggregations = aggregations;
         this.postAggregations = postAggregations;
         this.dimension = dimension;
         this.threshold = threshold;
